@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="تنظيف مجالس وسجاد بالدمام والخبر والقطيف - تنظيف احترافي للكنب والمجالس والسجاد والموكيت.">
+  <title>تنظيف مجالس وسجاد بالدمام والخبر والقطيف</title>
+  <style>
+    :root {
+      --navy: #102c4e;
+      --navy-deep: #071d37;
+      --blue: #1677c9;
+      --cyan: #2bc7d8;
+      --mint: #e8fbfa;
+      --cream: #fffaf3;
+      --gold: #f5b748;
+      --text: #17324d;
+      --muted: #6d7d8d;
+      --line: #e6eef3;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(16, 44, 78, .15);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 5%, rgba(43, 199, 216, .16), transparent 25rem),
+        radial-gradient(circle at 95% 30%, rgba(245, 183, 72, .12), transparent 25rem),
+        #f7fbfd;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 36px)); margin-inline: auto; }
+
+    .topbar {
+      color: rgba(255,255,255,.88);
+      background: var(--navy-deep);
+      font-size: 13px;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 38px;
+    }
+    .topbar a { color: #b9f4f1; font-weight: 700; }
+
+    header {
+      position: relative;
+      z-index: 5;
+      background: rgba(255,255,255,.9);
+      border-bottom: 1px solid rgba(230,238,243,.8);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 78px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: -.4px;
+      font-size: 20px;
+    }
+    .brand-mark {
+      position: relative;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      overflow: hidden;
+      color: var(--white);
+      background: linear-gradient(145deg, var(--blue), var(--cyan));
+      border-radius: 14px 14px 14px 5px;
+      box-shadow: 0 9px 20px rgba(22,119,201,.25);
+      font-size: 24px;
+    }
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      left: 7px;
+      top: 7px;
+    }
+    nav { display: flex; gap: 26px; color: #607488; font-size: 14px; font-weight: 700; }
+    nav a { transition: color .2s ease; }
+    nav a:hover { color: var(--blue); }
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      color: var(--navy);
+      background: #edf8fc;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .hero {
+      position: relative;
+      padding: 58px 0 72px;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border: 1px solid rgba(22,119,201,.09);
+      border-radius: 50%;
+    }
+    .hero::before { width: 470px; height: 470px; left: -210px; top: 40px; }
+    .hero::after { width: 340px; height: 340px; right: -165px; bottom: -160px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 58px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: #0c729c;
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 10px;
+    }
+    h1 {
+      max-width: 650px;
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1.14;
+      letter-spacing: -1.6px;
+    }
+    h1 span { color: var(--blue); }
+    .hero-copy {
+      max-width: 570px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 13px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(115deg, var(--blue), #0c9ab7);
+      box-shadow: 0 14px 26px rgba(22,119,201,.25);
+    }
+    .btn-primary:hover { box-shadow: 0 17px 30px rgba(22,119,201,.34); }
+    .btn-light { color: var(--navy); background: var(--white); border: 1px solid var(--line); }
+    .trust-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .avatars { display: flex; direction: ltr; }
+    .avatar {
+      display: grid;
+      width: 31px;
+      height: 31px;
+      margin-left: -7px;
+      place-items: center;
+      color: var(--navy);
+      background: #d8f5f5;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .avatar:nth-child(2) { background: #ffe8bf; }
+    .avatar:nth-child(3) { background: #dbe8ff; }
+    .avatar:nth-child(4) { background: #f8d9e2; }
+    .stars { color: var(--gold); letter-spacing: 1px; font-size: 15px; }
+
+    .visual {
+      position: relative;
+      min-height: 465px;
+    }
+    .visual-card {
+      position: absolute;
+      inset: 26px 22px 22px 26px;
+      overflow: hidden;
+      background: linear-gradient(150deg, #e6fbfc 0%, #effaff 50%, #d6f3f2 100%);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+    }
+    .visual-card::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -90px;
+      top: -110px;
+      border: 1px solid rgba(22,119,201,.14);
+      border-radius: 50%;
+      box-shadow: 0 0 0 25px rgba(255,255,255,.25), 0 0 0 50px rgba(255,255,255,.15);
+    }
+    .visual-label {
+      position: absolute;
+      z-index: 2;
+      top: 28px;
+      right: 28px;
+      padding: 8px 12px;
+      color: #0a7594;
+      background: rgba(255,255,255,.7);
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .ac-unit {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 49%;
+      width: 260px;
+      height: 145px;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(#fff, #e6f2f5);
+      border: 5px solid #d0e3e8;
+      border-radius: 24px 24px 35px 35px;
+      box-shadow: 0 21px 28px rgba(48,115,146,.15);
+    }
+    .ac-unit::before {
+      content: "";
+      position: absolute;
+      left: 21px;
+      right: 21px;
+      bottom: 25px;
+      height: 31px;
+      background: repeating-linear-gradient(90deg, #b7d2db 0 3px, transparent 3px 12px);
+      border-radius: 0 0 15px 15px;
+      opacity: .85;
+    }
+    .ac-unit::after {
+      content: "تنظيف مجالس وسجاد";
+      position: absolute;
+      right: 25px;
+      top: 22px;
+      color: #8aa3ad;
+      font-size: 10px;
+      font-weight: 900;
+    }
+    .indicator {
+      position: absolute;
+      left: 26px;
+      top: 28px;
+      width: 9px;
+      height: 9px;
+      background: #4bd4c1;
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(75,212,193,.13);
+    }
+    .wind {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 52%;
+      width: 340px;
+      height: 130px;
+      transform: translateX(-50%);
+      opacity: .8;
+    }
+    .wind i {
+      position: absolute;
+      display: block;
+      width: 180px;
+      height: 48px;
+      border-top: 3px solid rgba(43,199,216,.6);
+      border-radius: 50%;
+      transform: rotate(-8deg);
+    }
+    .wind i:nth-child(1) { top: 0; right: 0; }
+    .wind i:nth-child(2) { top: 42px; right: 68px; width: 215px; }
+    .wind i:nth-child(3) { top: 83px; right: 24px; width: 160px; }
+    .service-sticker {
+      position: absolute;
+      z-index: 3;
+      left: 5px;
+      bottom: 7px;
+      display: grid;
+      width: 115px;
+      height: 115px;
+      place-content: center;
+      color: var(--white);
+      background: var(--navy);
+      border: 8px solid #effdfe;
+      border-radius: 50%;
+      box-shadow: 0 15px 25px rgba(16,44,78,.18);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.35;
+      transform: rotate(-9deg);
+    }
+    .service-sticker strong { display: block; color: #72e4e0; font-size: 20px; }
+    .location-chip {
+      position: absolute;
+      z-index: 3;
+      right: 8px;
+      bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 16px;
+      color: var(--navy);
+      background: var(--white);
+      border-radius: 13px;
+      box-shadow: 0 13px 28px rgba(16,44,78,.12);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .location-chip b { color: var(--blue); font-size: 19px; }
+
+    .stats {
+      position: relative;
+      z-index: 2;
+      padding: 0 0 70px;
+    }
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      box-shadow: 0 13px 35px rgba(16,44,78,.06);
+    }
+    .stat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      min-height: 92px;
+      padding: 15px;
+      border-left: 1px solid var(--line);
+    }
+    .stat:last-child { border-left: 0; }
+    .stat-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: #087b98;
+      background: var(--mint);
+      border-radius: 13px;
+      font-size: 20px;
+    }
+    .stat strong { display: block; color: var(--navy); font-size: 16px; }
+    .stat small { display: block; color: var(--muted); font-size: 11px; }
+
+    .section { padding: 82px 0; }
+    .section-soft { background: var(--cream); }
+    .section-heading { max-width: 620px; margin-bottom: 36px; }
+    .section-heading.center { margin-inline: auto; text-align: center; }
+    .section-kicker { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: .6px; }
+    h2 {
+      margin: 8px 0 10px;
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 40px);
+      line-height: 1.25;
+      letter-spacing: -.8px;
+    }
+    .section-heading p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .service {
+      padding: 25px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .service:hover { transform: translateY(-6px); box-shadow: 0 16px 30px rgba(16,44,78,.09); }
+    .service-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      place-items: center;
+      color: var(--blue);
+      background: #eaf7fd;
+      border-radius: 14px;
+      font-size: 23px;
+    }
+    .service h3 { margin: 0 0 8px; color: var(--navy); font-size: 18px; }
+    .service p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .benefits-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      align-items: center;
+      gap: 70px;
+    }
+    .benefits-note {
+      position: relative;
+      min-height: 310px;
+      padding: 35px;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 28px;
+    }
+    .benefits-note::before {
+      content: "❄";
+      position: absolute;
+      right: 21px;
+      bottom: -38px;
+      color: rgba(113,228,224,.14);
+      font-size: 180px;
+      line-height: 1;
+    }
+    .benefits-note h3 { position: relative; max-width: 250px; margin: 0; font-size: 29px; line-height: 1.4; }
+    .benefits-note p { position: relative; max-width: 260px; margin: 16px 0 0; color: #b7d6e5; font-size: 13px; }
+    .benefits-note .mini-badge {
+      position: absolute;
+      left: 25px;
+      bottom: 24px;
+      padding: 8px 11px;
+      color: var(--navy);
+      background: var(--gold);
+      border-radius: 9px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .benefits-list { display: grid; gap: 25px; }
+    .benefit { display: flex; align-items: flex-start; gap: 16px; }
+    .benefit-check {
+      flex: 0 0 34px;
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      color: var(--white);
+      background: linear-gradient(145deg, var(--blue), var(--cyan));
+      border-radius: 11px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .benefit h3 { margin: 0 0 4px; color: var(--navy); font-size: 16px; }
+    .benefit p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .review {
+      position: relative;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+    .review::before { content: "“"; position: absolute; top: 12px; left: 20px; color: #d8f2f1; font-size: 60px; font-family: Georgia, serif; line-height: 1; }
+    .review-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
+    .review p { min-height: 76px; margin: 14px 0 20px; color: #516a7d; font-size: 13px; }
+    .reviewer { display: flex; align-items: center; gap: 10px; }
+    .reviewer-avatar { display: grid; width: 35px; height: 35px; place-items: center; color: var(--navy); background: #ddf6f4; border-radius: 50%; font-size: 12px; font-weight: 900; }
+    .reviewer strong { display: block; color: var(--navy); font-size: 13px; }
+    .reviewer small { display: block; color: var(--muted); font-size: 11px; }
+
+    .contact {
+      padding: 75px 0;
+      color: var(--white);
+      background: var(--navy);
+    }
+    .contact-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .contact h2 { margin-top: 0; color: var(--white); }
+    .contact p { margin: 0; color: #b9d2e1; font-size: 14px; }
+    .contact .hero-actions { margin-top: 0; }
+    .contact .btn-light { color: var(--navy); }
+
+    footer {
+      padding: 25px 0 30px;
+      color: #7a8b99;
+      background: #061b32;
+      text-align: center;
+      font-size: 12px;
+    }
+    footer p { margin: 0 0 8px; }
+    footer .designer { color: #75e1df; font-weight: 900; }
+    footer .designer:hover { color: var(--white); text-decoration: underline; }
+    .float-wa {
+      position: fixed;
+      z-index: 20;
+      left: 20px;
+      bottom: 22px;
+      display: grid;
+      width: 58px;
+      height: 58px;
+      place-items: center;
+      color: var(--white);
+      background: #1abf68;
+      border: 4px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 9px 24px rgba(11,117,69,.35);
+      font-size: 26px;
+      transition: transform .2s ease;
+    }
+    .float-wa:hover { transform: scale(1.08); }
+    .float-wa::after {
+      content: "تواصل معنا";
+      position: absolute;
+      left: 70px;
+      padding: 6px 9px;
+      color: var(--navy);
+      background: var(--white);
+      border-radius: 7px;
+      box-shadow: 0 6px 20px rgba(16,44,78,.12);
+      font-size: 10px;
+      font-weight: 900;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: opacity .2s ease, transform .2s ease;
+      pointer-events: none;
+    }
+    .float-wa:hover::after { opacity: 1; transform: translateX(0); }
+    .float-phone {
+      position: fixed;
+      z-index: 20;
+      left: 20px;
+      bottom: 91px;
+      display: grid;
+      width: 58px;
+      height: 58px;
+      place-items: center;
+      color: var(--white);
+      background: var(--blue);
+      border: 4px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 9px 24px rgba(22,119,201,.32);
+      font-size: 25px;
+      transition: transform .2s ease;
+    }
+    .float-phone:hover { transform: scale(1.08); }
+    .float-phone::after {
+      content: "اتصل الآن";
+      position: absolute;
+      left: 70px;
+      padding: 6px 9px;
+      color: var(--navy);
+      background: var(--white);
+      border-radius: 7px;
+      box-shadow: 0 6px 20px rgba(16,44,78,.12);
+      font-size: 10px;
+      font-weight: 900;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: opacity .2s ease, transform .2s ease;
+      pointer-events: none;
+    }
+    .float-phone:hover::after { opacity: 1; transform: translateX(0); }
+
+    @media (max-width: 860px) {
+      .hero-grid, .benefits-layout { grid-template-columns: 1fr; gap: 30px; }
+      .hero { padding-top: 42px; }
+      .visual { min-height: 420px; max-width: 570px; width: 100%; margin-inline: auto; }
+      .benefits-note { min-height: 250px; }
+      .services-grid, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 28px, 520px); }
+      .topbar-inner { justify-content: center; min-height: 34px; font-size: 11px; }
+      .topbar-inner span { display: none; }
+      .nav { min-height: 68px; }
+      nav { display: none; }
+      .nav-phone { padding: 7px 10px; font-size: 11px; }
+      .brand { font-size: 17px; }
+      .brand-mark { width: 36px; height: 36px; border-radius: 11px 11px 11px 4px; font-size: 20px; }
+      h1 { font-size: 38px; letter-spacing: -1px; }
+      .hero-copy { font-size: 15px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .trust-row { align-items: flex-start; }
+      .visual { min-height: 330px; margin-top: 15px; }
+      .visual-card { inset: 16px 8px 15px 8px; border-radius: 25px; }
+      .ac-unit { width: 190px; height: 112px; }
+      .ac-unit::before { left: 14px; right: 14px; bottom: 17px; height: 24px; }
+      .ac-unit::after { right: 18px; top: 17px; font-size: 8px; }
+      .indicator { left: 18px; top: 20px; width: 7px; height: 7px; }
+      .wind { width: 270px; top: 55%; }
+      .service-sticker { width: 91px; height: 91px; border-width: 6px; font-size: 10px; }
+      .service-sticker strong { font-size: 15px; }
+      .location-chip { right: 2px; bottom: 0; padding: 9px 11px; font-size: 10px; }
+      .location-chip b { font-size: 15px; }
+      .visual-label { top: 18px; right: 18px; padding: 6px 9px; font-size: 10px; }
+      .stats { padding-bottom: 45px; }
+      .stats-inner { grid-template-columns: 1fr; }
+      .stat { justify-content: flex-start; min-height: 69px; border-bottom: 1px solid var(--line); border-left: 0; }
+      .stat:last-child { border-bottom: 0; }
+      .section { padding: 58px 0; }
+      .services-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .service { padding: 21px; }
+      .benefits-layout { gap: 34px; }
+      .benefits-note { min-height: 260px; padding: 28px; }
+      .contact { padding: 58px 0; }
+      .contact h2 { font-size: 30px; }
+      .contact .hero-actions { width: 100%; }
+      .float-wa { left: 14px; bottom: 14px; width: 52px; height: 52px; font-size: 23px; }
+      .float-phone { left: 14px; bottom: 78px; width: 52px; height: 52px; font-size: 22px; }
+      .float-phone::after { display: none; }
+      .float-wa::after { display: none; }
+    }
+  </style>
+  <!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load('D9509GRC77U5KEVKHURG');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>خدمة احترافية تصل إليك أينما كنت</span>
+      <a href="tel:+966537375526">اتصل الآن: 0537375526</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="تنظيف مجالس وسجاد">
+        <span class="brand-mark">✦</span>
+        <span>تنظيف مجالس وسجاد</span>
+      </a>
+      <nav aria-label="التنقل الرئيسي">
+        <a href="#services">خدماتنا</a>
+        <a href="#why-us">لماذا نحن؟</a>
+        <a href="#reviews">آراء العملاء</a>
+      </nav>
+      <a class="nav-phone" href="tel:+966537375526">☎ 0537375526</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">نظافة تليق بمنزلك</div>
+          <h1>تنظيف مجالس وسجاد <span>باحترافية</span> في الدمام والخبر والقطيف</h1>
+          <p class="hero-copy">تنظيف عميق للمجالس والسجاد والكنب والموكيت لإزالة الأوساخ والبقع والروائح مع فريق متخصص وخدمة تصل إلى موقعك.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/966537375526" target="_blank" rel="noopener">◉ احجز عبر واتساب</a>
+            <a class="btn btn-light" href="tel:+966537375526">☎ اتصل الآن</a>
+          </div>
+          <div class="trust-row">
+            <div class="avatars" aria-hidden="true">
+              <span class="avatar">م</span><span class="avatar">س</span><span class="avatar">ع</span><span class="avatar">ن</span>
+            </div>
+            <div><span class="stars">★★★★★</span><br>خدمة تنظيف باهتمام في كل زيارة</div>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="تنظيف مجالس وسجاد">
+          <div class="visual-card">
+            <span class="visual-label">مجالس • سجاد • كنب</span>
+            <div class="wind" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="ac-unit"><span class="indicator"></span></div>
+          </div>
+          <div class="service-sticker"><strong>١٠٠٪</strong>عناية<br>بنظافة منزلك</div>
+          <div class="location-chip"><b>⌖</b> الدمام والخبر والقطيف</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="مميزات الخدمة السريعة">
+      <div class="container stats-inner">
+        <div class="stat"><span class="stat-icon">◷</span><div><strong>مواعيد مرنة</strong><small>نصل في الوقت المتفق عليه</small></div></div>
+        <div class="stat"><span class="stat-icon">✓</span><div><strong>فريق متخصص</strong><small>خبرة وعناية في كل تفصيلة</small></div></div>
+        <div class="stat"><span class="stat-icon">⌁</span><div><strong>خدمة مضمونة</strong><small>نتيجة تلاحظها من أول تشغيل</small></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">خدماتنا</span>
+          <h2>خدمات تنظيف المجالس والسجاد</h2>
+          <p>تنظيف احترافي للمجالس والسجاد والكنب والموكيت بأدوات مناسبة وعناية بالتفاصيل.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service">
+            <div class="service-icon">❄</div>
+            <h3>تنظيف المجالس</h3>
+            <p>تنظيف عميق للمجالس وإزالة الأوساخ والبقع والروائح المتراكمة.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">✣</div>
+            <h3>تنظيف السجاد والموكيت</h3>
+            <p>غسيل وتنظيف السجاد والموكيت وإزالة البقع والروائح بعناية.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">⌁</div>
+            <h3>تنظيف الكنب</h3>
+            <p>تنظيف الكنب بمعدات مناسبة للمساعدة في إزالة الأوساخ والبقع والروائح.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="why-us">
+      <div class="container benefits-layout">
+        <div class="benefits-note">
+          <h3>نظافة أعمق ومظهر أجمل.</h3>
+          <p>نهتم بتفاصيل التنظيف للحصول على مجالس وسجاد وكنب أكثر نظافة وانتعاشًا.</p>
+          <span class="mini-badge">نخدم الدمام والخبر والقطيف</span>
+        </div>
+        <div>
+          <div class="section-heading">
+            <span class="section-kicker">لماذا تنظيف مجالس وسجاد؟</span>
+            <h2>خدمة مرتبة من أول اتصال إلى آخر لمسة</h2>
+          </div>
+          <div class="benefits-list">
+            <div class="benefit"><span class="benefit-check">✓</span><div><h3>نلتزم بالنظافة داخل منزلك</h3><p>نستخدم أدوات مناسبة ونترك المكان مرتبًا بعد انتهاء الخدمة.</p></div></div>
+            <div class="benefit"><span class="benefit-check">✓</span><div><h3>أسعار واضحة قبل التنفيذ</h3><p>نعطيك تصورًا واضحًا للخدمة المطلوبة دون مفاجآت.</p></div></div>
+            <div class="benefit"><span class="benefit-check">✓</span><div><h3>نخدمك في الدمام والخبر والقطيف</h3><p>احجز الموعد المناسب وسيصل فريق التنظيف إلى موقعك في الدمام أو الخبر أو القطيف.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-kicker">آراء العملاء</span>
+          <h2>تجارب مريحة من عملاء راضين</h2>
+          <p>نحرص على تقديم خدمة تنظيف مرتبة ونتيجة ترضي عملاءنا.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review">
+            <div class="review-stars">★★★★★</div>
+            <p>شغل مرتب جدًا، وصلوا في الموعد ونظفوا المجلس والسجاد بعناية والفرق في النظافة واضح.</p>
+            <div class="reviewer"><span class="reviewer-avatar">أ</span><div><strong>أحمد العتيبي</strong><small>الدمام والخبر والقطيف</small></div></div>
+          </article>
+          <article class="review">
+            <div class="review-stars">★★★★★</div>
+            <p>تعامل ممتاز وسريع من أول الواتساب إلى نهاية الخدمة. أنصح بهم وبكل أمانة أكرر التجربة.</p>
+            <div class="reviewer"><span class="reviewer-avatar">ر</span><div><strong>ريم السالم</strong><small>الدمام والخبر والقطيف</small></div></div>
+          </article>
+          <article class="review">
+            <div class="review-stars">★★★★★</div>
+            <p>الفريق فاهم شغله ونظف السجاد والمجلس باهتمام. خدمة احترافية وتعامل ممتاز.</p>
+            <div class="reviewer"><span class="reviewer-avatar">خ</span><div><strong>خالد الحربي</strong><small>الدمام والخبر والقطيف</small></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container contact-box">
+        <div>
+          <h2>جاهز لمجالس وسجاد أنظف؟</h2>
+          <p>احجز تنظيف المجالس والسجاد الآن، ودع الباقي علينا.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="tel:+966537375526">☎ 0537375526</a>
+          <a class="btn btn-primary" href="https://wa.me/966537375526" target="_blank" rel="noopener">◉ واتساب</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>تم التصميم بواسطة <a class="designer" href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوى إبراهيم</a></p>
+    <p>© 2026 تنظيف مجالس وسجاد — جميع الحقوق محفوظة</p>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/966537375526" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">◉</a>
+  <a class="float-phone" href="tel:+966537375526" aria-label="اتصل بنا على 0537375526">☎</a>
+<script>
+document.addEventListener('click', function(event) {
+  var link = event.target.closest('a[href]');
+  if (!link || link.classList.contains('designer')) return;
+  var href = link.getAttribute('href') || '';
+  if (href.startsWith('tel:') || href.includes('wa.me/966')) {
+    if (window.ttq && typeof window.ttq.track === 'function') {
+      window.ttq.track('Contact', {method: href.startsWith('tel:') ? 'Phone Call' : 'WhatsApp'});
+    }
+  }
+});
+</script>
+</body>
+</html>
